@@ -1,8 +1,8 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+package Programmers;
 
-class Solution {
+import java.util.Arrays;
+
+class 완주하지못한선수 {
     public static String solution(String[] participant, String[] completion) {
         Arrays.sort(participant);
         Arrays.sort(completion);
