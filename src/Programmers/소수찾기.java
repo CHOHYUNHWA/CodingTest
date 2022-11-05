@@ -3,7 +3,7 @@ package Programmers;
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution {
+class 소수찾기 {
     public static int solution(int n) {
         int answer = 0;
         List<Integer> list = new ArrayList<Integer>();
