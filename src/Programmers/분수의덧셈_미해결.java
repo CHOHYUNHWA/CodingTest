@@ -12,18 +12,13 @@ public class 분수의덧셈_미해결 {
         int denum3 = denum1*num2 + denum2*num1;
         int num3 = num1*num2;
         int gcd =0;
-        if(denum3%num3 ==0){
-            answer[0] = denum3/num3;
-            answer[1] = 1;
+        for(int i =1; i <= denum3 && i <= num3; i++){
+            if(denum3%i ==0 && num3%i ==0){
+                gcd = i;
+            }
         }
-        if(num3%(denum3%num3) == 0){
-            gcd = denum3%num3;
-            answer[0] = denum3/gcd;
-            answer[1] = num3/gcd;
-        } else{
-            answer[0] = denum3;
-            answer[1] = num3;
-        }
+        answer[0] = denum3/gcd;
+        answer[1] = num3/gcd;
         return answer;
     }
 }
