@@ -7,19 +7,17 @@ public class 가장큰수찾기_미해결 {
         System.out.println(solution(new int[]{1,8,3}));
     }
     public static int[] solution(int[] array) {
-        int[] answer = {0, 0};
-        int[] tmp = new int[array.length];
-        for(int i = 0; i < array.length; i++){
-            tmp[i] = array[i];
-        }
-        Arrays.sort(tmp);
-        answer[0] = array[tmp.length - 1];
-        for(int i =0; i < array.length; i++){
-            if(answer[0] == array[i]){
-                answer[1] = i;
-                break;
+        int[] answer = new int[2];
+        int max = 0;
+        int count = 0;
+        for(int i = 0; i < array.length; i++) {
+            if(max < array[i]){
+                max = array[i];
+                count = i;
             }
         }
+        answer[0] = max;
+        answer[1] = count;
         return answer;
     }
 }
