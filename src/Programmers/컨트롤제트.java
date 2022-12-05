@@ -1,6 +1,6 @@
 package Programmers;
 
-public class 컨트롤제트_미해결 {
+public class 컨트롤제트 {
     public static void main(String[] args) {
         System.out.println(solution("10 Z Z 20 30 40"));
     }
