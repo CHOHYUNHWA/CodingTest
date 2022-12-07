@@ -1,33 +1,35 @@
 package Programmers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class 다항식더하기_미해결 {
-    public String solution(String polynomial) {
+    public static void main(String[] args) {
+        System.out.println(solution("3x + 7 + x"));
+        System.out.println(Integer.parseInt("3+3"));
+    }
+    public static String solution(String polynomial) {
         String answer = "";
-        List<String> answerX = new ArrayList<String>();
-        List<String> answerInt = new ArrayList<String>();
-        String[] answerArray = answer.split(" ");
-        for(int i = 0; i < answerArray.length; i++){
-            answerArray[i].replace("+","");
-        }
-        for(int i = 0; i < answerArray.length; i++) {
-            if (answerArray[i].charAt(answerArray[i].length() - 1) == 'x') {
-                answerX.add(answerArray[i]);
-            } else {
-                answerInt.add(answerArray[i]);
+        List<String> answerList = new ArrayList<String>();
+        String[] tmp = polynomial.split(" ");
+        System.out.println(Arrays.toString(tmp));
+        answerList.add(tmp[0]);
+        for(int i= 0; i<tmp.length; i++) {
+            if(tmp[i].equals("x")){
+                tmp[i] = "1x";
             }
         }
-        for(int i = 0; i < answerX.size(); i++){
-            answerX.get(i).replace("x","");
+        for(int i = 1; i < tmp.length-1; i++) {
+            if(tmp[i].equals("+")){
+                answerList.add(tmp[i]+tmp[i+1]);
+            }
+            if(tmp[i].equals("-")){
+                answerList.add(tmp[i]+tmp[i+1]);
+            }
         }
-        for(int i = 0; i<answerX.size(); i++){
-
-        }
-
-
-
+        System.out.println(answerList);
         return answer;
     }
 }
