@@ -1,4 +1,4 @@
-package Programmers;
+package Programmers.level0;
 
 public class 치킨쿠폰 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Programmers;
+package Programmers.level0;
 
 public class 안전지대 {
     public static void main(String[] args) {
