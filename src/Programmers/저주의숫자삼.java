@@ -16,12 +16,16 @@ public class 저주의숫자삼 {
         System.out.println("10 일때 : " + solution(10));
         System.out.println("15 일때 : " + solution(15));
         System.out.println("40 일때 : " + solution(40));
-
     }
 
     public static int solution(int n) {
         int answer = 0;
-        for (int i = 0; i < n; i++) {
+        int next = 0;
+        for (int i = 1; i <= n; i++) {
+            answer ++;
+            while(Integer.toString(answer).contains("3") || answer %3 == 0){
+                answer ++;
+            }
         }
         return answer;
     }
