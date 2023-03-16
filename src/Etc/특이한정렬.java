@@ -1,4 +1,4 @@
-package Programmers;
+package Etc;
 
 import java.util.ArrayList;
 import java.util.Arrays;
