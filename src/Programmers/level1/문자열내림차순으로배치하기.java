@@ -7,11 +7,8 @@ public class 문자열내림차순으로배치하기 {
         System.out.println(solution("Zbcdefg"));
     }
     public static String solution(String s) {
-        String answer = "";
-        char[] answerList = s.toCharArray();
-        Arrays.sort(answerList);
-        answer = answerList.toString();
-        return answer;
+            char[] arr = s.toCharArray();
+            Arrays.sort(arr);
+            return new StringBuilder(new String(arr)).reverse().toString();
+        }
     }
-}
-
